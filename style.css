@@ -10,7 +10,7 @@ h1 {
     font-size:60px;
     font-weight: bolder;
 }
-/*  centered div text - kr*/
+
 #explanation {
     height: 100%;
     text-align: center;
@@ -26,12 +26,50 @@ h1 {
     position: relative;
 }
 
+/* dropdown styling */
+
+/* Dropdown button */
+.dropbtn {
+    background-color: aqua;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color:rgb(80, 225, 18);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, .2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a{
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover{background-color: #ddd;}
+
+/* Show the dropdown menu - NEEDS JS to add this class to the .dropdown content container when the user clicks on the dropdown button */
+.show {display:block;}
+
+
 .left, .right{
     width: 25%;
 }
 
 .column{
-    
+    float:left;
+    padding: 10px;
 }
 
 .row:after {
@@ -44,6 +82,7 @@ h1 {
    height: 100%;
    object-fit: cover;
 }
+
 
 rick-cards {
     border: 1px solid #ddd;

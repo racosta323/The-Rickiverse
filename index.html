@@ -13,42 +13,36 @@
     </header>
     
     <!-- Background section -->
-    <!-- changed div id and css to explanation -kr -->
-    <!-- removed css class - kr -->
+
     <div> 
         <div id="explanation">
             <h2>Explanation</h2>
             <p>This is where we will put what our page is about and how to use the form</p>
-        
-            <!-- Form section -->
-            <!-- may not use -kr -->
-            <!-- <form>
-                <label for="name">Name: </label>
-                <input type="text" name="name" id></input>
-                <label for="status">Status: </label>
-                <input type="text" name="status"></input>
-                <label for="archetype">Archetype: </label>
-                <input type="text" name="archetype"></input>
-                <input type = "submit" value="SUBMIT" id="create">
-            </form> -->
+            <div class="dropdown">
+                <button class="dropbtn">Search Ricks</button>
+                <div id="myDropdown" class="dropdown-content">
+                    <!-- This is where our list of options will go; might need JS -->
+                    <a href="#">Option 1</a>
+                </div>
+            </div>
         </div> 
      
 
     <!-- Image section --> 
-        <div class="column">
-            <div class="left">
+        <div class="row">
+            <div class="column left">
                 <h3>Name </h3>
                 <h3>Status </h3>
                 <h3>Archetype </h3>
             </div>
-            <div>
+            <div class="column middle">
                 <img
                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8Gwj8FswCEddpx-dprUrrsOAjhFnd9UKIBA&usqp=CAU"
                 alt="Crazy Rick picture"
                 id="rick-image"
                 >
             </div>
-            <div class="right">
+            <div class="column right">
                 <h3>awesomeness</h3>
                 <h3>how much awesome really</h3>
                 <h3>this much awesome</h3>
@@ -102,3 +96,15 @@
     <!-- end of one card -->
 </body>
 </html>
+
+            <!-- Form section -->
+            <!-- may not use -kr -->
+            <!-- <form>
+                <label for="name">Name: </label>
+                <input type="text" name="name" id></input>
+                <label for="status">Status: </label>
+                <input type="text" name="status"></input>
+                <label for="archetype">Archetype: </label>
+                <input type="text" name="archetype"></input>
+                <input type = "submit" value="SUBMIT" id="create">
+            </form> -->
