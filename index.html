@@ -13,13 +13,16 @@
     </header>
     
     <!-- Background section -->
-    <div class="split"> 
-        <div id="background">
-            <h2>Background</h2>
+    <!-- changed div id and css to explanation -kr -->
+    <!-- removed css class - kr -->
+    <div> 
+        <div id="explanation">
+            <h2>Explanation</h2>
             <p>This is where we will put what our page is about and how to use the form</p>
         
             <!-- Form section -->
-            <form>
+            <!-- may not use -kr -->
+            <!-- <form>
                 <label for="name">Name: </label>
                 <input type="text" name="name" id></input>
                 <label for="status">Status: </label>
@@ -27,20 +30,31 @@
                 <label for="archetype">Archetype: </label>
                 <input type="text" name="archetype"></input>
                 <input type = "submit" value="SUBMIT" id="create">
-            </form>
+            </form> -->
         </div> 
      
 
     <!-- Image section --> 
-        <div id="rick-container">
-            <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8Gwj8FswCEddpx-dprUrrsOAjhFnd9UKIBA&usqp=CAU"
-            alt="Crazy Rick picture"
-            id="rick-image"
-            >
-            <h2 id="name">Name </h>
-            <h3 id="status">Status </h3>
-            <h3 id ="arch">Archetype </h3>
+        <div class="column">
+            <div class="left">
+                <h3>Name </h3>
+                <h3>Status </h3>
+                <h3>Archetype </h3>
+            </div>
+            <div>
+                <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8Gwj8FswCEddpx-dprUrrsOAjhFnd9UKIBA&usqp=CAU"
+                alt="Crazy Rick picture"
+                id="rick-image"
+                >
+            </div>
+            <div class="right">
+                <h3>awesomeness</h3>
+                <h3>how much awesome really</h3>
+                <h3>this much awesome</h3>
+            </div>
+            
+
         </div>
     </div>
 
