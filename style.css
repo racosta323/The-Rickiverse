@@ -29,7 +29,8 @@ h1 {
 /* dropdown styling */
 
 /* Dropdown button */
-.dropbtn {
+/* changed this from a class to an ID to help with JS - RA */
+#dropbtn {
     background-color: aqua;
     color: white;
     padding: 16px;
@@ -38,10 +39,21 @@ h1 {
     cursor: pointer;
 }
 
+/* I also forgot to add these classes the first time around */
+.dropdown{
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #2980B9;
+  }
+
 /* Dropdown content (hidden by default) */
 .dropdown-content{
     display: none;
-    position: absolute;
+    /* removed for testing - RA to return */
+    /* position: absolute; */
     background-color:rgb(80, 225, 18);
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, .2);
