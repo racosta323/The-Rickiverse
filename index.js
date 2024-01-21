@@ -1,71 +1,70 @@
+//cleaned up init a bit to simplify
+//cleaned up fetch request
+//removed button and replaced with dropdown menu; added JS to dropdown
+//pull to specific API section
+
+
+
 // page load
-function init(){
-    // apiData()
-    document.addEventListener("DOMContentLoaded", ()=>{
-        // functions go here
-        const button = document.getElementById("dropbtn")
-        console.log("checking page load")
-        btnlistener(button)
-       
-    })  
-}
 
-//declare variables
-
-
-
-//select from HTML
-
-
-//BUTTON STUFF
-
-//button listener
-function btnlistener(button){
-    button.addEventListener("click", ()=>{
-        buttonMenu()
-        //what will we have this button do?
-    })
-}
-
-function buttonMenu(){
-    document.getElementById("myDropdown").classList.toggle("show")
-}
-
-// Close the dropdown menu if the user clicks outside of it
-// window.onclick = function(event) {
-//     if (!event.target.matches('.dropbtn')) {
-//       var dropdowns = document.getElementsByClassName("dropdown-content");
-//       var i;
-//       for (i = 0; i < dropdowns.length; i++) {
-//         var openDropdown = dropdowns[i];
-//         if (openDropdown.classList.contains('show')) {
-//           openDropdown.classList.remove('show');
-//         }
-//       }
-//     }
-//   }
+document.addEventListener("DOMContentLoaded", ()=>{
+    // functions go here
+    apiData()
+})
 
 
 //pull from API
 function apiData(){
-    const response = fetch("https://rickandmortyapi.com/api/character")
+    fetch("https://rickandmortyapi.com/api/character/?name=rick") 
     .then(resp => resp.json())
-    .then(data => console.log(data))
+    .then(data => {
+        // console.log(data)
+        rickList(data)
+    }) //replace console log with render function; pass data 
 }
-
-
 
 
 //renders data and adds to DOM function
 
 
-//add a new 
+function rickList(characters){
+    const results = characters.results
+    const selectEl = document.querySelector("select")
+
+    //populates options in dropdown
+    results.forEach((rick) => {
+        // creates an option for each rick
+        let createOption = document.createElement("option")
+        createOption.value = `${rick.id}`
+        createOption.innerText = `${rick.name}`
+        selectEl.add(createOption)
+
+        //adds an event listener to options where value will udpate main img and left side
+        selectEl.addEventListener('change', (e)=>{
+            let targetRick = e.target.value
+            if(targetRick === createOption.value){
+                //cb fun?
+                changeContents(rick.image, rick.name, rick.status, rick.location.name)
+            }
+        })
+    })
+
+    function changeContents(imgSrc, name, status, arch){
+        //selects elements
+        let rickImage = document.getElementById("rick-image")
+        let leftDiv = document.querySelector(".left").children
+        let rickName = leftDiv[0]
+        let rickStatus = leftDiv[1]
+        let rickArch = leftDiv[2]
+        
+        //updates each
+        rickImage.src = `${imgSrc}`
+        rickName.textContent = `Name: ${name}`
+        rickStatus.textContent = `Status: ${status}`
+        rickArch.textContent= `Location: ${arch}`
+    }
+}
 
 
 
 
-
-
-
-
-init()
