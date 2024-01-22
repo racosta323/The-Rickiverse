@@ -5,35 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="index.js"></script>
     <link rel="stylesheet" href="style.css"><link>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand">
     <title>Enter the Rickiverse</title>
 </head>
 <body>
     <header>
-        <h1>Enter the Rickiverse</h1>
+            <img src="https://pluspng.com/img-png/rick-and-morty-png-rick-and-morty-logo-and-image-png-1041.png"
+                alt="Rick and Morty through the portal"
+                id="Portal Rick and Morty"
+                width="1041"
+                height="389"
+            >
     </header>
     
     <!-- Background section -->
 
     <div> 
         <div id="explanation">
-            <h2>Explanation</h2>
-            <p>This is where we will put what our page is about and how to use the form</p>
-            <div class="dropdown">
-                <button class="dropbtn">Search Ricks</button>
-                <div id="myDropdown" class="dropdown-content">
-                    <!-- This is where our list of options will go; might need JS -->
-                    <a href="#">Option 1</a>
-                </div>
-            </div>
+            <h2>Wubba Lubba Dub Dub! Pick-A-Rick</h2>
+            <p>Choose a Rick using the dropdown menu below. See their stats on the left then click to like on the right!</p>
+            <form>
+                <label>Search Ricks</label>
+                 <select>
+                    <option value="click-here">Click here!</option>
+                 </select>
+                 
+           </form>
         </div> 
      
-
     <!-- Image section --> 
         <div class="row">
             <div class="column left">
                 <h3>Name </h3>
                 <h3>Status </h3>
-                <h3>Archetype </h3>
+                <h3>Location</h3>
             </div>
             <div class="column middle">
                 <img
@@ -43,13 +48,16 @@
                 >
             </div>
             <div class="column right">
-                <h3>awesomeness</h3>
-                <h3>how much awesome really</h3>
-                <h3>this much awesome</h3>
+                <h3>Species</h3>
+                <h3>Origin</h3>
+                <h3>Number of likes</h3>
             </div>
             
 
         </div>
+    </div>
+    <div class="dropdown">
+        <button class="dropbtn">Like Btn Placeholder</button>
     </div>
 
     <!-- Image cards section -->
