@@ -8,26 +8,36 @@ document.addEventListener("DOMContentLoaded", ()=>{
     // apiData()
     // internalData()
     combinedData()
+    
     // externalRicks = externalChar()
     // console.log(externalRicks)
 
-    const h3Likes = document.getElementsByClassName("right")[0].children[2]
- })
+    // let middleImg = document.getElementById("rick-image")
 
-let externalRicks;
+    // let middleImgSrc = middleImg.src
+    // let middleImgAlt = middleImg.alt
+    // console.log(middleImgAlt)
+
+    // // console.log(middleImg, middleImgSrc)
+    // console.log(middleImgSrc)
+    // middleImgSrc = "https://rickandmortyapi.com/api/character/avatar/2.jpeg"
+    
+ })
 
 
 // combined external data
 function combinedData(){
+    
     fetch("https://rickandmortyapi.com/api/character/?name=rick") 
     .then(resp => resp.json())
     .then(externalData => {
-        externalChar(externalData)
+        // externalChar(externalData)
+        debugger
         rickOptions(externalData)
-        submitListener(externalData)
-    })
+        // submitListener(externalData)
+        debugger
+    });
     
-
     fetch("http://localhost:3000/results")
     .then(resp => resp.json())
     .then(internalData => {
@@ -38,19 +48,20 @@ function combinedData(){
     // submitListener(externalData,internalData)
 }
 
-//pull from API
-// function apiData(){
-//     fetch("https://rickandmortyapi.com/api/character/?name=rick") 
-//     .then(resp => resp.json())
-//     .then(data => {
-//         externalChar(data)
-//         rickOptions(data)
-//         submitListener(data)
-//     })
-// }
+// pull from API
+function apiData(){
+    fetch("https://rickandmortyapi.com/api/character/?name=rick") 
+    .then(resp => resp.json())
+    .then(data => {
+        data.forEach(e=>console.log(e))
+        // externalChar(data)
+        // rickOptions(data)
+        // submitListener(data)
+    })
+}
+
 //all characters from API
 function externalChar(apiCharacters){
-    console.log(apiCharacters.results)
     let externalRickCharsResults = apiCharacters.results
     return externalRickCharsResults
     // return apiCharacters.results
@@ -63,18 +74,30 @@ function addOptions(characters){
         
         const rickImgSrc = rick.image
         const rickName = rick.name
-        dropdownListener(options, rick)
+        // console.log(rick)
+
+        // rick.addEventListener("click", ()=>{
+        //     console.log("test")
+        // })
+        // dropdownListener(options, rick)
+        
     })
+    
 }
 
-
-//Adds options to dropdon
+// Adds options to dropdon
 function rickOptions(apiCharacters){
     const results = externalChar(apiCharacters)
     const selectEl = document.querySelector("select")
 
+
+
+    //TABLE FOR NOW
     //populates options in dropdown
-    addOptions(results)        
+    addOptions(results) 
+    // console.log(results) 
+    // console.log(document.getElementsByClassName("grid").children)
+    
 }
 
 //pull from db.json
@@ -96,7 +119,7 @@ function internalRicks(internalChar){
 
 
 
-//like button section
+//like button section - NEEDS WORK
 function likesBtn(rick, target){
     // const heroSrc = document.getElementsByClassName("middle")[0].firstElementChild.src
     const targetName = target
@@ -106,7 +129,6 @@ function likesBtn(rick, target){
     
     //shows likes from internal db.json
    outer: for(let i=0; i<rick.length; i++){
-    debugger
         const extLikes = rick[i].likes
         extRickName = rick[i].name
         if(extRickName === targetName){
@@ -118,7 +140,9 @@ function likesBtn(rick, target){
 }
 
 
-function likesListener(internal){
+//LISTENERS
+
+function likesListener(internal){ //NEEDS WORK
     const likeButton = document.querySelectorAll("button")[0]
     
     likeButton.addEventListener('click',()=>{
@@ -133,8 +157,57 @@ function likesListener(internal){
 }
 
 
+//image listener
+// function imgListener(){
+//     const half = document.querySelector("#half").querySelectorAll("img")
+//     let middleImg = document.getElementById("rick-image")
+    
+//     // let middleImg = document.getElementsByClassName("middle")[0].firstElementChild
+//     let middleImgSrc = middleImg.src
+//     let middleImgAlt = middleImg.alt
+//     // console.log(middleImgAlt)
 
-function submitListener(exData){
+//     // console.log(middleImg, middleImgSrc)
+//     // console.log(middleImgSrc)
+
+//     half.forEach(img => {
+//         img.addEventListener('click', (e)=>{
+//         console.log(e.target)    
+//         let gridImgSrc = e.target.src
+//         let gridImgName = e.target.name
+//         console.log(gridImgName)
+
+//             // changeText(gridImgSrc, name, status, origin, species, location)
+//             // console.log(middleImg)
+//             // gridImgSrc = e.target.src
+//             // console.log(gridImgSrc)
+//             // console.log(middleImgSrc)
+//             // middleImgSrc = `${gridImgSrc}`
+//             // middleImgAlt = `${gridAlt}`
+//             // console.log(middleImgSrc)
+//             // console.log(middleImg)
+//         })
+//     })
+// }
+
+
+
+
+
+
+    //iterate through
+    // for(let i=0; i<half.length; i++){
+    //     let gridImage = half[i]
+    //     const middleImg = document.getElementsByClassName("middle")[0].firstElementChild.src
+    //     console.log(gridImage, "middle image:", middleImg)
+
+    //listener
+    // half.addEventListener('click',()=>{console.log("something")})
+
+    // }
+
+
+function submitListener(exData){ //NEEDS WORK
     const submitButton = document.querySelectorAll("button")[1]
     
     submitButton.addEventListener("click",(e)=>{
@@ -196,20 +269,20 @@ function submitListener(exData){
 
 function addImgToGrid (){
     addImg(rickEntryImg, rickEntryName)
-    addToDb(rickEntryName, rickEntryStatus, rickEntrySpecies, rickEntryOrigin, rickEntryImg)
+    // addToDb(rickEntryName, rickEntryStatus, rickEntrySpecies, rickEntryOrigin, rickEntryImg)
 }
 
-function addImg(imgSrc, imgAlt){
-    const photoArea = document.getElementById("half")
-    const imgEl = document.createElement("img")
+// function addImg(imgSrc, imgAlt){
+//     const photoArea = document.getElementById("half")
+//     const imgEl = document.createElement("img")
     
-    imgEl.src = `${imgSrc}`
-    imgEl.alt = `Image of ${imgAlt}`
-    photoArea.appendChild(imgEl)
-}
+//     imgEl.src = `${imgSrc}`
+//     imgEl.alt = `Image of ${imgAlt}`
+//     photoArea.appendChild(imgEl)
+// }
 //end of like button section
 
-//adds to db.json
+//adds to db.json - NEEDS WORK
 function addToDb(name, status, species, origin, url){
     //what we'll send to JSON
     const newRickObj = {
@@ -236,50 +309,71 @@ fetch('http://localhost:3000/results',{
 
 //callback functions
 
+//Populates ricks into dropdown AND images into grid
 function createOption(option){
+
+    //TABLE FOR NOW
     //create for dropdown
-    const selectEl = document.querySelector("select")
-    let createOption = document.createElement("option")
-    createOption.value = `${option.id}`
-    createOption.innerText = `${option.name}`
-    selectEl.add(createOption)
+    // const selectEl = document.querySelector("select")
+    // let createOption = document.createElement("option")
+    // createOption.value = `${option.id}`
+    // createOption.innerText = `${option.name}`
+    // selectEl.add(createOption)
     
     //create for grid
     const half = document.querySelector("#half")
+    let createDivImg = document.createElement("div")
+    createDivImg.className = "grid"
+    
     let createImg = document.createElement("img")
     createImg.src = `${option.image}`
     createImg.alt = `Image of ${option.name}`
-    half.append(createImg)
+    half.append(createDivImg.appendChild(createImg))
+    
 }
 
-function createLikes(option){
-    const h3Likes = document.getElementsByClassName("right")[0].children[2]
-    let createOption = document.createElement("option")
-    createOption.value = `${option.id}`
-    createOption.innerText = `${option.name}`
-    selectEl.add(createOption)
-    return createOption
-}
+function photoListener(){
+    let findGridDiv = document.getElementsByClassName("grid")
+    console.log(findGridDiv)
+    console.log(findGridDiv[0])
+    console.log(findGridDiv[1])
 
-
-function dropdownListener(allRicks, everyOne){
-    const selectEl = document.querySelector("select")
-    selectEl.addEventListener('change', (e)=>{
-        let targetRick = e.target.value
-        changeContent(targetRick, allRicks, everyOne)
-
-    })
-}
-
-
-
-function changeContent(target, rickArry, one){
-    if(target === rickArry.value){
-        changeText(one.image, one.name, one.status, one.origin.name, one.species, one.location.name)
+    for(i=0; i<findGridDiv.length; i++){
+        debugger
+        console.log(findGridDiv[i])
+        debugger
     }
+
 }
 
-function changeText(imgSrc, name, status, origin, species, location){
+// function createLikes(option){
+//     const h3Likes = document.getElementsByClassName("right")[0].children[2]
+//     let createOption = document.createElement("option")
+//     createOption.value = `${option.id}`
+//     createOption.innerText = `${option.name}`
+//     selectEl.add(createOption)
+//     return createOption
+// }
+
+//TABLE FOR NOW
+// function dropdownListener(allRicks, everyOne){
+//     const selectEl = document.querySelector("select")
+//     selectEl.addEventListener('change', (e)=>{
+//         let targetRick = e.target.value
+//         // changeContent(targetRick, allRicks, everyOne)
+//         console.log(targetRick)
+//     })
+// }
+
+
+//PROBABLY WON'T KEEP NOW THAT IMAGES ARE ON GRID
+// function changeContent(target, rickArry, one){
+//     if(target === rickArry.value){
+//         changeText(one.image, one.name, one.status, one.origin.name, one.species, one.location.name)
+//     }
+// }
+
+function changeText(imgSrc, name, status, origin, species, location){ //NEEDS WORK
     //selects elements
     let rickImage = document.getElementById("rick-image")
     //left side
