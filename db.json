@@ -18,7 +18,7 @@
       "origin": "unknown",
       "image": "https://rickandmortyapi.com/api/character/avatar/8.jpeg",
       "location": "Citadel of Ricks",
-      "likes": 5
+      "likes": 6
     },
     {
       "id": "5fd5",
@@ -88,7 +88,7 @@
       "origin": "unknown",
       "image": "https://rickandmortyapi.com/api/character/avatar/56.jpeg",
       "location": "Citadel of Ricks",
-      "likes": 1
+      "likes": 2
     },
     {
       "id": "2a48",
@@ -158,7 +158,7 @@
       "origin": "unknown",
       "image": "https://rickandmortyapi.com/api/character/avatar/135.jpeg",
       "location": "Citadel of Ricks",
-      "likes": 1
+      "likes": 2
     },
     {
       "id": "5248",

@@ -82,7 +82,6 @@ function increaseLikes(ricks, likes){
     console.log(ricks, likes)
     const rickH3 = document.getElementsByClassName("left")[0].querySelector("h3").innerText
 
-
     if(rickH3 === ricks.name){
         console.log(rickH3, ricks.name)
 

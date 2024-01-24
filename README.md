@@ -2,45 +2,47 @@
 
 A simple webapp to demonstrate calling an api, populating it's fetched information into a fields next to a central image, populating fetched images into a grid, and being able to "like" populated images with a counter.
 
+This project is a Rick and Morty-themed web app that fetches character data from a local server and dynamically populates the interface with information about each variety of Rick. The app allows users to select from a dropdown menu, view their details on the left and right side of the interface, and see the character's image in the center of the page. Users can also like a character, with the like count dynamically updating.
+
 ## Features:
 
-    Calling External API:
-        Demonstrates fetching data from the Rick and Morty API.
+    Dynamic Content Rendering:
+        Utilizes the Fetch API to retrieve character data from a local server.
+        Populates the UI with character information upon page load.
 
-    Populating Data:
-        Fetches information from the API and populates it into fields next to a central image.
-
-    Image Grid:
-        Fetches and populates images into a responsive grid.
+    Interactive Interface:
+        Allows users to select a character from a dropdown menu to view their details.
+        Clicking on a character's image dynamically updates the displayed information on the left side.
 
     Like Functionality:
-        Allows users to "like" populated images with a counter.
-
-
+        Users can click a "Like" button to increase the like count for a selected character.
+        Updates the like count dynamically and persists the data to the server.
+        
 ## Usage:
 
     [Clone the repository](https://github.com/racosta323/the-rickiverse/)
 
-    Open index.html in your browser.
-    
-    Explore the image grid, like functionality, and dynamic data rendering.
+    Open index.html in a browser window.
 
-## Code Highlights:
+    Explore the dropdown menu to select a Rick and view their details.
 
-Functions:
+    Click on a character's image in the grid to view their information.
 
-combinedData():
-       Combines data from the external API and an internal source.
-       Fetches data from both external and internal sources and initializes key function
+    Like a character to increase their like count.
 
-externalChar(apiCharacters):
-       Logs external API characters and returns the results
+## Implementation Details:
 
-likesBtn(rick, target)
-       
-## Authors
+    Event listeners are used to handle interactions such as image clicks and dropdown changes.
 
-Rene Acosta and Kent Riggs - Flatiron School Cohort 010824 SE East - Phase 1 Final Project
+    The app dynamically creates and updates HTML elements to display character information in a grid.
+
+    Data is fetched from and updated on a local server using the Fetch API.
+
+## Database Interaction:
+
+    The app interacts with a local server (http://localhost:3000/results) to fetch and update character data.
+
+    A PATCH request is used to update the like count for a specific character.
 
 ## License
 
