@@ -1,8 +1,11 @@
 document.addEventListener("DOMContentLoaded", ()=>{
-    // getResponse()
-//    renderData() 
-    loadAPI()
     
+    
+    
+    loadAPI()
+    // listenForLike()
+
+  
 })
 
 function loadAPI(){
@@ -10,10 +13,15 @@ function loadAPI(){
     .then(resp => resp.json())
     .then(data => {
         data.forEach(e=> {
-           renderData(e)
-           
+            renderData(e)
+            
+    
         })
         console.log(data)
+        // let numLikes = document.getElementsByClassName("right")[0].querySelectorAll("h3")[2]
+        // console.log(numLikes)
+        
+       
         
     });
 }
@@ -22,9 +30,10 @@ function renderData(rick){
     //searches for elements
     const gridHalf = document.getElementById("half")
     const middleImg = document.getElementById("rick-image")
-    const numLikes = document.getElementsByClassName("right")[0].querySelectorAll("h3")[2]
-    numLikes.innerText = "Number of Likes: 0"
+    let numLikes = document.getElementsByClassName("right")[0].querySelectorAll("h3")[2]
+    numLikes.innerText = 1
     const likeButton = document.querySelector("button")
+    
     
 
     //left side
@@ -40,8 +49,6 @@ function renderData(rick){
     const createDivs = document.createElement("div")
     const createImg = document.createElement("img")
 
-    
-
     createImg.addEventListener("click",()=>{
         nameEl.innerText = rick.name
         statusEl.innerText = rick.status
@@ -49,23 +56,24 @@ function renderData(rick){
         speciesEl.innerText = rick.species
         locationEl.innerText = rick.location
         middleImg.src = rick.image
-        numLikes.innerText = `Number of Likes: ${rick.likes}`
+        numLikes.innerText = `${rick.likes}`
+
+    
+    likeButton.addEventListener("click", ()=> {increaseLikes(rick, numLikes)})
     })
 
 
     // updates elements
-    createDivs.className = "grid"
-   
+    createDivs.className = "card"
     createImg.src = `${rick.image}`
-
     createImg.alt = `Image of ${rick.name}`
-
 
     //adds to DOM
     createDivs.append(createImg)
     gridHalf.append(createDivs)
 
-    // listenForLike(likeButton, numLikes, rick)
+   
+
     
 }
 
@@ -91,38 +99,46 @@ function renderData(rick){
 //       // toy.likes ++
 //     })
 //  }
- function listenForLike(likeBtn, numLikes, rick){
 
-    likeBtn.addEventListener("click", ()=>{
-        console.log(rick.likes)
-        console.log(numLikes)
-        
-        numLikes.innerText = `Number of Likes: ${++rick.likes}`
-        
-    })    
+
+function increaseLikes(ricks, likes){
+    console.log(ricks, likes)
+
+    console.log(likes.textContent) 
+    likes.textContent = ++ricks.likes
+    console.log(likes)
+
+    // let numLikes = document.getElementsByClassName("right")[0].querySelectorAll("h3")[2]
+    // console.log(numLikes)
+    // const likeBtn = document.querySelector("button")
+    // console.log(likeBtn) 
+
 
     // likeBtn.addEventListener("click", ()=>{
+
     //     console.log(numLikes)
 
-    // //     fetch(`http://localhost:3000/results/${rick.id}`,{
-    // //     method: "PATCH",
-    // //     headers: {
-    // //         'Content-Type': 'application/json',
-    // //     },
-    // //     body: JSON.stringify({
-    // //         likes: rick.likes
-    // //     })
-    // //     })
-    // //     .then(resp =>resp.json())
-    // //     .then(data => likesElement.textContent = `${data}`) 
-    // // }) 
-    // })
- }    
+        fetch(`http://localhost:3000/results/${ricks.id}`,{
+            method: "PATCH",
+            headers: {
+                'Content-Type': 'application/json',
+                },
+            body: JSON.stringify({
+                likes: ricks.likes
+                })
+            })
+            .then(resp =>resp.json())
+            .then(data => {
+               
+                console.log(data.likes)
+            })  
+    //     })
+}
 
 // How I added from API
 // function addToDb(name, status, species, origin, url,location){
 //     //what we'll send to JSON
-//     const newRickObj = {
+//     const newRicksObj = {
 //         name: `${name}`,
 //         status: `${status}`,
 //         species: `${species}`,
