@@ -1,197 +1,204 @@
 {
   "results": [
     {
-      "id": "1",
-      "name": "Rick Sanchez",
-      "status": "Alive",
-      "species": "Human",
-      "type": "",
-      "origin": {
-        "name": "Earth (C-137)",
-        "url": "https://rickandmortyapi.com/api/location/1"
-      },
-      "image": "https://rickandmortyapi.com/api/character/avatar/1.jpeg",
-      "likes": 110
-    },
-    {
-      "id": "0557",
+      "id": "11da",
       "name": "Rick Sanchez",
       "status": "Alive",
       "species": "Human",
       "origin": "Earth (C-137)",
       "image": "https://rickandmortyapi.com/api/character/avatar/1.jpeg",
-      "likes": 1
+      "location": "Citadel of Ricks",
+      "likes": 0
     },
     {
-      "id": "87e6",
+      "id": "040a",
       "name": "Adjudicator Rick",
       "status": "Dead",
       "species": "Human",
       "origin": "unknown",
       "image": "https://rickandmortyapi.com/api/character/avatar/8.jpeg",
-      "likes": 1
+      "location": "Citadel of Ricks",
+      "likes": 0
     },
     {
-      "id": "d59a",
+      "id": "5fd5",
       "name": "Alien Rick",
       "status": "unknown",
       "species": "Alien",
       "origin": "unknown",
       "image": "https://rickandmortyapi.com/api/character/avatar/15.jpeg",
-      "likes": 1
+      "location": "Citadel of Ricks",
+      "likes": 0
     },
     {
-      "id": "aa31",
+      "id": "9469",
       "name": "Antenna Rick",
       "status": "unknown",
       "species": "Human",
       "origin": "unknown",
       "image": "https://rickandmortyapi.com/api/character/avatar/19.jpeg",
-      "likes": 1
+      "location": "unknown",
+      "likes": 0
     },
     {
-      "id": "6bf1",
-      "name": "Aqua Rick",
-      "status": "unknown",
-      "species": "Humanoid",
-      "origin": "unknown",
-      "image": "https://rickandmortyapi.com/api/character/avatar/22.jpeg",
-      "likes": 1
-    },
-    {
-      "id": "764b",
-      "name": "Black Rick",
-      "status": "Alive",
-      "species": "Human",
-      "origin": "unknown",
-      "image": "https://rickandmortyapi.com/api/character/avatar/48.jpeg",
-      "likes": 1
-    },
-    {
-      "id": "d6f9",
-      "name": "Bootleg Portal Chemist Rick",
-      "status": "Dead",
-      "species": "Human",
-      "origin": "unknown",
-      "image": "https://rickandmortyapi.com/api/character/avatar/56.jpeg",
-      "likes": 1
-    },
-    {
-      "id": "b01f",
+      "id": "4bbc",
       "name": "Commander Rick",
       "status": "Dead",
       "species": "Human",
       "origin": "unknown",
       "image": "https://rickandmortyapi.com/api/character/avatar/69.jpeg",
-      "likes": 1
+      "location": "Citadel of Ricks",
+      "likes": 0
     },
     {
-      "id": "bae2",
+      "id": "53fa",
       "name": "Cool Rick",
       "status": "Alive",
       "species": "Human",
       "origin": "Earth (K-83)",
       "image": "https://rickandmortyapi.com/api/character/avatar/72.jpeg",
-      "likes": 1
+      "location": "Citadel of Ricks",
+      "likes": 0
     },
     {
-      "id": "bb45",
+      "id": "6905",
+      "name": "Aqua Rick",
+      "status": "unknown",
+      "species": "Humanoid",
+      "origin": "unknown",
+      "image": "https://rickandmortyapi.com/api/character/avatar/22.jpeg",
+      "location": "Citadel of Ricks",
+      "likes": 0
+    },
+    {
+      "id": "2042",
+      "name": "Black Rick",
+      "status": "Alive",
+      "species": "Human",
+      "origin": "unknown",
+      "image": "https://rickandmortyapi.com/api/character/avatar/48.jpeg",
+      "location": "Citadel of Ricks",
+      "likes": 0
+    },
+    {
+      "id": "a8a7",
+      "name": "Bootleg Portal Chemist Rick",
+      "status": "Dead",
+      "species": "Human",
+      "origin": "unknown",
+      "image": "https://rickandmortyapi.com/api/character/avatar/56.jpeg",
+      "location": "Citadel of Ricks",
+      "likes": 0
+    },
+    {
+      "id": "2a48",
       "name": "Cop Rick",
       "status": "Alive",
       "species": "Human",
       "origin": "unknown",
       "image": "https://rickandmortyapi.com/api/character/avatar/74.jpeg",
-      "likes": 1
+      "location": "Citadel of Ricks",
+      "likes": 0
     },
     {
-      "id": "c64c",
+      "id": "5e72",
       "name": "Cowboy Rick",
       "status": "Alive",
       "species": "Human",
       "origin": "unknown",
       "image": "https://rickandmortyapi.com/api/character/avatar/78.jpeg",
-      "likes": 1
+      "location": "Citadel of Ricks",
+      "likes": 0
     },
     {
-      "id": "7b62",
+      "id": "d323",
       "name": "Cronenberg Rick",
       "status": "unknown",
       "species": "Cronenberg",
       "origin": "Cronenberg Earth",
       "image": "https://rickandmortyapi.com/api/character/avatar/82.jpeg",
-      "likes": 1
+      "location": "Earth (C-137)",
+      "likes": 0
     },
     {
-      "id": "9d1c",
+      "id": "8fed",
       "name": "Cyclops Rick",
       "status": "Dead",
       "species": "Humanoid",
       "origin": "unknown",
       "image": "https://rickandmortyapi.com/api/character/avatar/86.jpeg",
-      "likes": 1
+      "location": "Citadel of Ricks",
+      "likes": 0
     },
     {
-      "id": "616a",
+      "id": "1e2f",
       "name": "Doofus Rick",
       "status": "unknown",
       "species": "Human",
       "origin": "Earth (J19ζ7)",
       "image": "https://rickandmortyapi.com/api/character/avatar/103.jpeg",
-      "likes": 1
+      "location": "Earth (Replacement Dimension)",
+      "likes": 0
     },
     {
-      "id": "e85d",
+      "id": "d9c9",
       "name": "Evil Rick",
       "status": "Dead",
       "species": "Humanoid",
       "origin": "unknown",
       "image": "https://rickandmortyapi.com/api/character/avatar/119.jpeg",
-      "likes": 1
+      "location": "Citadel of Ricks",
+      "likes": 0
     },
     {
-      "id": "de2c",
+      "id": "97c2",
       "name": "Garment District Rick",
       "status": "Dead",
       "species": "Human",
       "origin": "unknown",
       "image": "https://rickandmortyapi.com/api/character/avatar/135.jpeg",
-      "likes": 1
+      "location": "Citadel of Ricks",
+      "likes": 0
     },
     {
-      "id": "8405",
+      "id": "5248",
       "name": "Insurance Rick",
       "status": "unknown",
       "species": "Human",
       "origin": "unknown",
       "image": "https://rickandmortyapi.com/api/character/avatar/164.jpeg",
-      "likes": 1
+      "location": "Citadel of Ricks",
+      "likes": 0
     },
     {
-      "id": "d04a",
+      "id": "7dfb",
       "name": "Investigator Rick",
       "status": "Dead",
       "species": "Human",
       "origin": "unknown",
       "image": "https://rickandmortyapi.com/api/character/avatar/165.jpeg",
-      "likes": 1
+      "location": "Citadel of Ricks",
+      "likes": 0
     },
     {
-      "id": "5060",
+      "id": "c307",
       "name": "Juggling Rick",
       "status": "unknown",
       "species": "Human",
       "origin": "unknown",
       "image": "https://rickandmortyapi.com/api/character/avatar/187.jpeg",
-      "likes": 1
+      "location": "Citadel of Ricks",
+      "likes": 0
     },
     {
-      "id": "6625",
+      "id": "2df8",
       "name": "Maximums Rickimus",
       "status": "Dead",
       "species": "Human",
       "origin": "unknown",
       "image": "https://rickandmortyapi.com/api/character/avatar/215.jpeg",
-      "likes": 1
+      "location": "Rick's Memories",
+      "likes": 0
     }
   ]
 }

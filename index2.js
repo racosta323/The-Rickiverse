@@ -6,15 +6,15 @@ document.addEventListener("DOMContentLoaded", ()=>{
 })
 
 function loadAPI(){
-  fetch("https://rickandmortyapi.com/api/character/?name=rick") 
+  fetch("http://localhost:3000/results") 
     .then(resp => resp.json())
     .then(data => {
-        data.results.forEach(e=> {
+        data.forEach(e=> {
            renderData(e)
            
         })
         console.log(data)
-        listenForLike()
+        
     });
 }
 
@@ -22,6 +22,10 @@ function renderData(rick){
     //searches for elements
     const gridHalf = document.getElementById("half")
     const middleImg = document.getElementById("rick-image")
+    const numLikes = document.getElementsByClassName("right")[0].querySelectorAll("h3")[2]
+    numLikes.innerText = "Number of Likes: 0"
+    const likeButton = document.querySelector("button")
+    
 
     //left side
     let nameEl = document.getElementsByClassName("left")[0].querySelector("h3")
@@ -36,32 +40,24 @@ function renderData(rick){
     const createDivs = document.createElement("div")
     const createImg = document.createElement("img")
 
-    createImg.addEventListener("click",(event)=>{
+    
+
+    createImg.addEventListener("click",()=>{
         nameEl.innerText = rick.name
         statusEl.innerText = rick.status
-        originEl.innerText = rick.origin.name
+        originEl.innerText = rick.origin
         speciesEl.innerText = rick.species
-        locationEl.innerText = rick.location.name
+        locationEl.innerText = rick.location
         middleImg.src = rick.image
+        numLikes.innerText = `Number of Likes: ${rick.likes}`
+    })
 
-        //from db.json
-        const numLikes = document.getElementsByClassName("right")[0].querySelectorAll("h3")[2]
-        console.log(numLikes)
-        
-        fetch("http://localhost:3000/results") 
-            .then(resp => resp.json())
-            .then(data => {
-                data.forEach(e=> {
-                console.log(e)
-                
-                })
-        
-    });
-})
 
     // updates elements
     createDivs.className = "grid"
+   
     createImg.src = `${rick.image}`
+
     createImg.alt = `Image of ${rick.name}`
 
 
@@ -69,45 +65,75 @@ function renderData(rick){
     createDivs.append(createImg)
     gridHalf.append(createDivs)
 
-    //adds to db.json
-    // addToDb(rick.name, rick.status, rick.species, rick.origin.name, rick.image) -- how do I stop from adding after refresh?
+    // listenForLike(likeButton, numLikes, rick)
+    
 }
 
 
  //DB.JSON SECTION
 
- function listenForLike(){
-    const likeButton = document.querySelectorAll("button")[0]
-    likeButton.addEventListener("click", ()=>{
-        const numLikes = document.getElementsByClassName("right")[0].querySelector("p")
-        numLikes.innerText = "Number of Likes:"
+//  function updateLikes(btn, p, toy){
+//     //select the button and add event listener
+//     // const btn = document.querySelectorAll("button")[1]
+//     // console.log(btn)
+    
+//     btn.addEventListener('click', () =>{
+//       console.log("I've been clicked")
+//       //increment likes
+//       console.log(p.innerText = ++toy.likes)
+  
+      
+  
+//       //get likes element
+  
+  
+  
+//       // toy.likes ++
+//     })
+//  }
+ function listenForLike(likeBtn, numLikes, rick){
+
+    likeBtn.addEventListener("click", ()=>{
+        console.log(rick.likes)
         console.log(numLikes)
-    }) 
- }
+        
+        numLikes.innerText = `Number of Likes: ${++rick.likes}`
+        
+    })    
+
+    // likeBtn.addEventListener("click", ()=>{
+    //     console.log(numLikes)
+
+    // //     fetch(`http://localhost:3000/results/${rick.id}`,{
+    // //     method: "PATCH",
+    // //     headers: {
+    // //         'Content-Type': 'application/json',
+    // //     },
+    // //     body: JSON.stringify({
+    // //         likes: rick.likes
+    // //     })
+    // //     })
+    // //     .then(resp =>resp.json())
+    // //     .then(data => likesElement.textContent = `${data}`) 
+    // // }) 
+    // })
+ }    
+
+// How I added from API
+// function addToDb(name, status, species, origin, url,location){
+//     //what we'll send to JSON
+//     const newRickObj = {
+//         name: `${name}`,
+//         status: `${status}`,
+//         species: `${species}`,
+//         origin: `${origin}`,
+//         image: `${url}`,
+//         location: `${location.name}`,
+//         likes: 1
+//     };
+// }    
 
 
-function addToDb(name, status, species, origin, url){
-    //what we'll send to JSON
-    const newRickObj = {
-        name: `${name}`,
-        status: `${status}`,
-        species: `${species}`,
-        origin: `${origin}`,
-        image: `${url}`,
-        likes: 1
-    };
-
-fetch('http://localhost:3000/results',{
-    method: "POST",
-    headers: {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json'
-    },
-    body: JSON.stringify(newRickObj)
-})
-.then(resp =>resp.json())
-.then(data => console.log(data))
-} 
 
 
 
