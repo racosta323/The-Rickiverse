@@ -1,8 +1,8 @@
 # Enter the Rickiverse
 
-A simple webapp to demonstrate calling an api, populating it's fetched information into a fields next to a central image, populating fetched images into a grid, and being able to "like" populated images with a counter.
-
-This project is a Rick and Morty-themed web app that fetches character data from a local server and dynamically populates the interface with information about each variety of Rick. The app allows users to select from a dropdown menu, view their details on the left and right side of the interface, and see the character's image in the center of the page. Users can also like a character, with the like count dynamically updating.
+Rick and Morty-themed webapp to demonstrate calling an api that fetches character data from a local server and dynamically populates the interface with information about each variety of Rick. 
+The app allows users to select from a dropdown menu, view their details on the left and right side of the interface, and see the character's image in the center of the page. 
+Users can also like a character, with the like count updating with each click. 
 
 ## Features:
 
@@ -12,15 +12,15 @@ This project is a Rick and Morty-themed web app that fetches character data from
 
     Interactive Interface:
         Allows users to select a character from a dropdown menu to view their details.
-        Clicking on a character's image dynamically updates the displayed information on the left side.
+        Clicking on a character's image dynamically updates the displayed information on the left and right side.
 
     Like Functionality:
-        Users can click a "Like" button to increase the like count for a selected character.
-        Updates the like count dynamically and persists the data to the server.
+        Users can click a "Like" button to increase the like count for a selected Rick.
+        Updates the like count which persists via db.json.
         
 ## Usage:
 
-    [Clone the repository](https://github.com/racosta323/the-rickiverse/)
+ [Clone the repository](https://github.com/racosta323/the-rickiverse/)
 
     Open index.html in a browser window.
 
@@ -28,7 +28,7 @@ This project is a Rick and Morty-themed web app that fetches character data from
 
     Click on a character's image in the grid to view their information.
 
-    Like a character to increase their like count.
+    Use the "like button" a character to increase their like count.
 
 ## Implementation Details:
 
