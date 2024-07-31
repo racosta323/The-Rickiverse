@@ -1,0 +1,17 @@
+{
+  "name": "rk-phase-1-group-project",
+  "version": "1.0.0",
+  "description": "Rick and Morty-themed webapp to demonstrate calling an api that fetches character data from a local server and dynamically populates the interface with information about each variety of Rick.  The app allows users to select from a dropdown menu, view their details on the left and right side of the interface, and see the character's image in the center of the page.  Users can also like a character, with the like count updating with each click.",
+  "main": "index2.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "serve",
+    "build": "esbuild index2.js --bundle --outfile=dist/out.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "esbuild": "^0.23.0",
+    "serve": "^14.2.3"
+  }
+}
