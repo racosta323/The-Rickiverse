@@ -7,6 +7,7 @@ function loadAPI(){
     .then(resp => resp.json())
     .then(data => {
         data.forEach(e=> {
+            console.log(e)
             renderData(e)
         })
     });

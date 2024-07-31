@@ -5,8 +5,9 @@
   "main": "index2.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "serve",
-    "build": "esbuild index2.js --bundle --outfile=dist/out.js"
+    "start": "serve .",
+    "build": "esbuild index2.js --bundle --outfile=dist/out.js",
+    "server": "json-server --watch db.json --port=3000"
   },
   "author": "",
   "license": "ISC",
