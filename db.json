@@ -48,7 +48,7 @@
       "origin": "unknown",
       "image": "https://rickandmortyapi.com/api/character/avatar/69.jpeg",
       "location": "Citadel of Ricks",
-      "likes": 1
+      "likes": 5
     },
     {
       "id": "53fa",
@@ -68,7 +68,7 @@
       "origin": "unknown",
       "image": "https://rickandmortyapi.com/api/character/avatar/22.jpeg",
       "location": "Citadel of Ricks",
-      "likes": 1
+      "likes": 4
     },
     {
       "id": "2042",
@@ -198,7 +198,7 @@
       "origin": "unknown",
       "image": "https://rickandmortyapi.com/api/character/avatar/215.jpeg",
       "location": "Rick's Memories",
-      "likes": 1
+      "likes": 5
     }
   ]
 }

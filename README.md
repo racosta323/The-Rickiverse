@@ -22,7 +22,7 @@ Users can also like a character, with the like count updating with each click.
 
  [Clone the repository](https://github.com/racosta323/the-rickiverse/)
 
-    Open index.html in a browser window.
+    Run the frontend server using `npm start`; run the backend server using `npm run server`.
 
     Explore the dropdown menu to select a Rick and view their details.
 

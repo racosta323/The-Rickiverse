@@ -7,7 +7,6 @@ function loadAPI(){
     .then(resp => resp.json())
     .then(data => {
         data.forEach(e=> {
-            console.log(e)
             renderData(e)
         })
     });
@@ -84,11 +83,7 @@ function increaseLikes(ricks, likes){
     const rickH3 = document.getElementsByClassName("left")[0].querySelector("h3").innerText
 
     if(rickH3 === ricks.name){
-        console.log(rickH3, ricks.name)
-
-        console.log(likes.textContent) 
         likes.textContent = ++ricks.likes
-        console.log(likes)
 
         fetch(`http://localhost:3000/results/${ricks.id}`,{
             method: "PATCH",
