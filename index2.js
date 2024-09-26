@@ -1,8 +1,5 @@
 document.addEventListener("DOMContentLoaded", ()=>{
-    // getResponse()
-//    renderData() 
     loadAPI()
-    
 })
 
 function loadAPI(){
@@ -10,11 +7,8 @@ function loadAPI(){
     .then(resp => resp.json())
     .then(data => {
         data.forEach(e=> {
-           renderData(e)
-           
+            renderData(e)
         })
-        console.log(data)
-        
     });
 }
 
@@ -22,11 +16,11 @@ function renderData(rick){
     //searches for elements
     const gridHalf = document.getElementById("half")
     const middleImg = document.getElementById("rick-image")
-    const numLikes = document.getElementsByClassName("right")[0].querySelectorAll("h3")[2]
-    numLikes.innerText = "Number of Likes: 0"
+    let numLikes = document.getElementsByClassName("right")[0].querySelectorAll("h3")[2]
     const likeButton = document.querySelector("button")
+    const dropdown = document.querySelector("select")
+    const form = document.querySelector("form")
     
-
     //left side
     let nameEl = document.getElementsByClassName("left")[0].querySelector("h3")
     let statusEl = document.getElementsByClassName("left")[0].getElementsByTagName("h3")[1]
@@ -39,90 +33,79 @@ function renderData(rick){
     //creates elements
     const createDivs = document.createElement("div")
     const createImg = document.createElement("img")
+    const createOption = document.createElement("option")
 
-    
-
-    createImg.addEventListener("click",()=>{
+    createImg.addEventListener("click",(e)=>{
         nameEl.innerText = rick.name
         statusEl.innerText = rick.status
         originEl.innerText = rick.origin
         speciesEl.innerText = rick.species
         locationEl.innerText = rick.location
         middleImg.src = rick.image
-        numLikes.innerText = `Number of Likes: ${rick.likes}`
+        numLikes.innerText = `${rick.likes}`
+        dropdown.selectedIndex = 0
+        createOption.value = rick.name 
     })
 
+    likeButton.addEventListener("click", ()=> {increaseLikes(rick, numLikes)})
 
     // updates elements
-    createDivs.className = "grid"
-   
+    createDivs.className = "card"
     createImg.src = `${rick.image}`
-
     createImg.alt = `Image of ${rick.name}`
-
+    createOption.innerText = rick.name
 
     //adds to DOM
     createDivs.append(createImg)
     gridHalf.append(createDivs)
+    dropdown.append(createOption)
 
-    // listenForLike(likeButton, numLikes, rick)
     
+    dropdown.addEventListener("change",(event)=>{
+
+        if(event.target.value === rick.name){
+            nameEl.innerText = event.target.value
+            statusEl.innerText = rick.status
+            originEl.innerText = rick.origin
+            speciesEl.innerText = rick.species
+            locationEl.innerText = rick.location
+            middleImg.src = rick.image
+            numLikes.innerText = `${rick.likes}`
+        }
+    })
 }
 
 
  //DB.JSON SECTION
 
-//  function updateLikes(btn, p, toy){
-//     //select the button and add event listener
-//     // const btn = document.querySelectorAll("button")[1]
-//     // console.log(btn)
-    
-//     btn.addEventListener('click', () =>{
-//       console.log("I've been clicked")
-//       //increment likes
-//       console.log(p.innerText = ++toy.likes)
-  
-      
-  
-//       //get likes element
-  
-  
-  
-//       // toy.likes ++
-//     })
-//  }
- function listenForLike(likeBtn, numLikes, rick){
+function increaseLikes(ricks, likes){
+    console.log(ricks, likes)
+    const rickH3 = document.getElementsByClassName("left")[0].querySelector("h3").innerText
 
-    likeBtn.addEventListener("click", ()=>{
-        console.log(rick.likes)
-        console.log(numLikes)
-        
-        numLikes.innerText = `Number of Likes: ${++rick.likes}`
-        
-    })    
+    if(rickH3 === ricks.name){
+        likes.textContent = ++ricks.likes
 
-    // likeBtn.addEventListener("click", ()=>{
-    //     console.log(numLikes)
-
-    // //     fetch(`http://localhost:3000/results/${rick.id}`,{
-    // //     method: "PATCH",
-    // //     headers: {
-    // //         'Content-Type': 'application/json',
-    // //     },
-    // //     body: JSON.stringify({
-    // //         likes: rick.likes
-    // //     })
-    // //     })
-    // //     .then(resp =>resp.json())
-    // //     .then(data => likesElement.textContent = `${data}`) 
-    // // }) 
-    // })
- }    
+        fetch(`http://localhost:3000/results/${ricks.id}`,{
+            method: "PATCH",
+            headers: {
+                'Content-Type': 'application/json',
+                },
+            body: JSON.stringify({
+                likes: ricks.likes
+                })
+            })
+            .then(resp =>resp.json())
+            .then(data => {
+               
+                console.log(data.likes)
+            })  
+    }
+}
 
 // How I added from API
 // function addToDb(name, status, species, origin, url,location){
 //     //what we'll send to JSON
-//     const newRickObj = {
+//     const newRicksObj = {
 //         name: `${name}`,
 //         status: `${status}`,
 //         species: `${species}`,

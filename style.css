@@ -1,44 +1,50 @@
-/* removed button and attributes to button - RA */
-
 header {
-    padding: 1%;
-    color: white;
-    background-color: rgb(28, 177, 28);
+    margin: 0;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
 }
 
-h1 {
-    display: block;
-    text-align: center;
-    font-size:60px;
-    font-weight: bolder;
-}
+body {
+    font-family: "Quicksand", sans-serif;
+  }
 
 #explanation {
     height: 100%;
+    color: rgb(4, 60, 110);
     text-align: center;
     z-index: 1;
     overflow-x: hidden;
     padding-top: 20px;
     padding-left: 20px;
+    font-size: 22px;
 }
 
-#rick-container {
-    width:50%;
-    padding-top: 20px;
-    position: relative;
+/* dropdown styling */
+.dropdown{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+/* Dropdown button */
+.dropbtn {
+    background-color: rgb(4, 60, 110);
+    color: white;
+    padding: 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px; 
+    transition: background-color 0.3s ease;
 }
 
-option{
-    background-color: aqua;
+.dropbtn:hover {
+    background-color: rgb(166, 204, 204); 
 }
 
-.left, .right{
-    width: 25%;
-}
-
-.column{
-    float:left;
-    padding: 10px;
+.row{
+    display: flex;
+    justify-content: center;
 }
 
 .row:after {
@@ -46,14 +52,37 @@ option{
     display: table;
     clear: both;
 }
+
+.left, .right{
+    width: 20%;
+    text-align: center;
+    color: rgb(4, 60, 110);
+    border-style:solid;
+    border-color: rgb(96, 168, 95);
+    height: 400px;
+}
+
+.column{
+    float:left;
+    padding: 0px 10px 0px 10px;
+}
+
+.middle{
+    width: 30%;
+}
+
 #rick-image{
    width: 100%; 
-   height: 100%;
+   height: 400px;
    object-fit: cover;
 }
 
+#main-image{
+    width: 1041;
+    height: 389;
+}
 
-rick-cards {
+.rick-cards {
     border: 1px solid #ddd;
     border-radius: 4px;
     padding: 5px;
@@ -96,20 +125,60 @@ rick-cards {
     text-indent: .5em;
   }
 
-/* rick cards */
+/* form area */
+input, textarea{
+    font: size 1rem;
+    border: 1.5px solid black;
+    background-color: white;
+    padding: 10.5px;
+    margin: .25rem 0;
+    width:90%;
+}
 
-#half{
-    margin-top: 50px;
-    border-style:solid;
-    border-color: black;
+#create{
+    background-color:rgb(80, 225, 18);
+    font-size: 1.25rem;
+    width:95%;
+    font-weight: bold;
+    margin: 1.25rem 0;
+}
+
+/* rick image cards */
+
+.grid-container {
+    margin-top: 25px;
+    border-style: solid;
+    border-color: rgb(96, 168, 95);
     padding: 10px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
-    overflow-x: hidden;
+    
 }
 
-#half img{
-    object-fit: contain;
-    overflow: hidden;
+#half {
+    border-style: solid;
+    border-color: rgb(96, 168, 95);
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ccc; 
+    width: 100%;
+}
+
+.card img {
+    width: 100%; 
+    height: auto; 
+    object-fit: cover; 
+}
+
+.row p{
+    font-weight: 900;
 }

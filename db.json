@@ -8,7 +8,7 @@
       "origin": "Earth (C-137)",
       "image": "https://rickandmortyapi.com/api/character/avatar/1.jpeg",
       "location": "Citadel of Ricks",
-      "likes": 0
+      "likes": 1
     },
     {
       "id": "040a",
@@ -18,7 +18,7 @@
       "origin": "unknown",
       "image": "https://rickandmortyapi.com/api/character/avatar/8.jpeg",
       "location": "Citadel of Ricks",
-      "likes": 0
+      "likes": 6
     },
     {
       "id": "5fd5",
@@ -28,7 +28,7 @@
       "origin": "unknown",
       "image": "https://rickandmortyapi.com/api/character/avatar/15.jpeg",
       "location": "Citadel of Ricks",
-      "likes": 0
+      "likes": 7
     },
     {
       "id": "9469",
@@ -38,7 +38,7 @@
       "origin": "unknown",
       "image": "https://rickandmortyapi.com/api/character/avatar/19.jpeg",
       "location": "unknown",
-      "likes": 0
+      "likes": 2
     },
     {
       "id": "4bbc",
@@ -48,7 +48,7 @@
       "origin": "unknown",
       "image": "https://rickandmortyapi.com/api/character/avatar/69.jpeg",
       "location": "Citadel of Ricks",
-      "likes": 0
+      "likes": 5
     },
     {
       "id": "53fa",
@@ -58,7 +58,7 @@
       "origin": "Earth (K-83)",
       "image": "https://rickandmortyapi.com/api/character/avatar/72.jpeg",
       "location": "Citadel of Ricks",
-      "likes": 0
+      "likes": 2
     },
     {
       "id": "6905",
@@ -68,7 +68,7 @@
       "origin": "unknown",
       "image": "https://rickandmortyapi.com/api/character/avatar/22.jpeg",
       "location": "Citadel of Ricks",
-      "likes": 0
+      "likes": 4
     },
     {
       "id": "2042",
@@ -78,7 +78,7 @@
       "origin": "unknown",
       "image": "https://rickandmortyapi.com/api/character/avatar/48.jpeg",
       "location": "Citadel of Ricks",
-      "likes": 0
+      "likes": 1
     },
     {
       "id": "a8a7",
@@ -88,7 +88,7 @@
       "origin": "unknown",
       "image": "https://rickandmortyapi.com/api/character/avatar/56.jpeg",
       "location": "Citadel of Ricks",
-      "likes": 0
+      "likes": 2
     },
     {
       "id": "2a48",
@@ -98,7 +98,7 @@
       "origin": "unknown",
       "image": "https://rickandmortyapi.com/api/character/avatar/74.jpeg",
       "location": "Citadel of Ricks",
-      "likes": 0
+      "likes": 2
     },
     {
       "id": "5e72",
@@ -108,7 +108,7 @@
       "origin": "unknown",
       "image": "https://rickandmortyapi.com/api/character/avatar/78.jpeg",
       "location": "Citadel of Ricks",
-      "likes": 0
+      "likes": 1
     },
     {
       "id": "d323",
@@ -118,7 +118,7 @@
       "origin": "Cronenberg Earth",
       "image": "https://rickandmortyapi.com/api/character/avatar/82.jpeg",
       "location": "Earth (C-137)",
-      "likes": 0
+      "likes": 2
     },
     {
       "id": "8fed",
@@ -128,7 +128,7 @@
       "origin": "unknown",
       "image": "https://rickandmortyapi.com/api/character/avatar/86.jpeg",
       "location": "Citadel of Ricks",
-      "likes": 0
+      "likes": 1
     },
     {
       "id": "1e2f",
@@ -138,7 +138,7 @@
       "origin": "Earth (J19ζ7)",
       "image": "https://rickandmortyapi.com/api/character/avatar/103.jpeg",
       "location": "Earth (Replacement Dimension)",
-      "likes": 0
+      "likes": 1
     },
     {
       "id": "d9c9",
@@ -148,7 +148,7 @@
       "origin": "unknown",
       "image": "https://rickandmortyapi.com/api/character/avatar/119.jpeg",
       "location": "Citadel of Ricks",
-      "likes": 0
+      "likes": 1
     },
     {
       "id": "97c2",
@@ -158,7 +158,7 @@
       "origin": "unknown",
       "image": "https://rickandmortyapi.com/api/character/avatar/135.jpeg",
       "location": "Citadel of Ricks",
-      "likes": 0
+      "likes": 2
     },
     {
       "id": "5248",
@@ -168,7 +168,7 @@
       "origin": "unknown",
       "image": "https://rickandmortyapi.com/api/character/avatar/164.jpeg",
       "location": "Citadel of Ricks",
-      "likes": 0
+      "likes": 1
     },
     {
       "id": "7dfb",
@@ -178,7 +178,7 @@
       "origin": "unknown",
       "image": "https://rickandmortyapi.com/api/character/avatar/165.jpeg",
       "location": "Citadel of Ricks",
-      "likes": 0
+      "likes": 1
     },
     {
       "id": "c307",
@@ -188,7 +188,7 @@
       "origin": "unknown",
       "image": "https://rickandmortyapi.com/api/character/avatar/187.jpeg",
       "location": "Citadel of Ricks",
-      "likes": 0
+      "likes": 1
     },
     {
       "id": "2df8",
@@ -198,7 +198,7 @@
       "origin": "unknown",
       "image": "https://rickandmortyapi.com/api/character/avatar/215.jpeg",
       "location": "Rick's Memories",
-      "likes": 0
+      "likes": 5
     }
   ]
 }
